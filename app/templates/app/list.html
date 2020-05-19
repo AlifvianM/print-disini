@@ -3,8 +3,9 @@
 
 {% block content %}
   
-<h1>{{user.first_name}}</h1>
 
+
+<a href="{% url 'logout' %}"><h1>{{user.first_name}}</h1></a>
 <a href="{% url 'app-create' %}">Tambah</a>
       <table class="table">
   <thead>
