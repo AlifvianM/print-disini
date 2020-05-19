@@ -15,10 +15,20 @@ from django.shortcuts import get_object_or_404
 
 from django.views.generic import FormView
 
+from django.contrib.auth.decorators import login_required
+
 import PyPDF2, io
 
 # Create your views here.
 
+@login_required
+def UserPost(request):
+    user_post = Pemesanan.objects.filter(pengguna = request.user).order_by('-created_at')
+    template = 'app/list.html'
+    return render(request, template, {
+                'pemesanans':user_post
+            }
+        )
 
 class Home(TemplateView, LoginRequiredMixin, UserPassesTestMixin):
     template_name = "app/index.html"
@@ -29,6 +39,11 @@ class PemesananListView(ListView, LoginRequiredMixin, UserPassesTestMixin):
     template_name = "app/list.html"
     context_object_name = 'pemesanans'
     ordering_by = ['-created_at']
+    # queryset = Pemesanan.objects.filter(pengguna = user)
+
+    def get_queryset(self):
+        my_post = Pemesanan.objects.filter(pengguna = self.request.user)
+        return super().get_queryset()
 
 class PemesananCreateView(CreateView, LoginRequiredMixin, UserPassesTestMixin):
     # model = Pemesanan
