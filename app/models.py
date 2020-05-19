@@ -41,20 +41,22 @@ class Pemesanan(models.Model):
 	STATUS = (
 		('Telah Dibayar' , 'dibayar'),
 		('Menunggu Pembayaran' , 'menunggu'),
+		('Belum Dibayar', 'belum')
 	)
-	pengguna 			= models.ForeignKey(User, on_delete=models.CASCADE)
-	file 				= models.FileField(upload_to='documents/')
-	print_id			= models.ForeignKey(Print, on_delete=models.CASCADE)
-	status_id			= models.ForeignKey(Status, on_delete=models.CASCADE)
-	created_at			= models.DateTimeField(auto_now_add=True)
-	update_at 			= models.DateTimeField(auto_now=True)
+	pengguna 				= models.ForeignKey(User, on_delete=models.CASCADE)
+	nama_file 				= models.CharField(max_length=255)
+	file 						= models.FileField(upload_to='documents/')
+	print_id					= models.ForeignKey(Print, on_delete=models.CASCADE)
+	status_id				= models.ForeignKey(Status, on_delete=models.CASCADE, default='1')
+	created_at				= models.DateTimeField(auto_now_add=True)
+	update_at 				= models.DateTimeField(auto_now=True)
 	waktu_pengambilan 	= models.DateField()
 	pengambilan_id 		= models.ForeignKey(Pengambilan, on_delete=models.CASCADE)
-	banyak_halaman		= models.IntegerField(default=0, null=True, blank=True)
-	copy 				= models.IntegerField(default=1)
-	harga_bayar			= models.FloatField(default=0)
-	status_bayar 		= models.CharField(max_length=255, choices=STATUS, default='Menunggu Pembayaran')
-	bukti 				= models.ImageField(upload_to='documents/', null=True, blank=True)
+	banyak_halaman			= models.IntegerField(default=0, null=True, blank=True)
+	copy 						= models.IntegerField(default=1)
+	harga_bayar				= models.FloatField(default=0)
+	status_bayar 			= models.CharField(max_length=255, choices=STATUS, default='Belum Dibayar')
+	bukti 					= models.ImageField(upload_to='documents/', null=True, blank=True)
 
 
 
@@ -72,6 +74,7 @@ class Pemesanan(models.Model):
 	# 	pdf = PyPDF2.PdfFileReader(obj.file.path)
 	# 	info = pdf.getNumPages()
 	# 	print(info)
+
 	# 	self.banyak_halaman=info
 	# 	obj.save()
 

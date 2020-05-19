@@ -56,45 +56,6 @@ class PemesananCreateView(CreateView, LoginRequiredMixin, UserPassesTestMixin):
     	form.instance.pengguna = self.request.user
     	return super().form_valid(form)	
 
-class PemesananDetailView(DetailView, LoginRequiredMixin, UserPassesTestMixin):
-    model = Pemesanan
-    template_name = "app/detail.html"
-    queryset = Pemesanan.objects.all()
-
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     obj = Pemesanan.objects.get(id=self.kwargs['pk'])
-    #     # print(obj.file)
-    #     pdf = PyPDF2.PdfFileReader(obj.file.path)
-    #     info = pdf.getNumPages()
-    #     # print(info)
-
-
-
-    #     total = info * 10
-    #     # print(total)
-
-    #     context['total'] = total
-
-    #     return context
-
-    def get_object(self):
-        obj = super().get_object()
-        print(obj.file.path)
-        print(obj.banyak_halaman)
-        hal = obj.banyak_halaman
-        print(hal*obj.harga_bayar)
-        pdf = PyPDF2.PdfFileReader(obj.file.path)
-        info = pdf.getNumPages()
-        obj.banyak_halaman = info
-        # obj.save()
-
-        obj.harga_bayar = obj.banyak_halaman * obj.print_id.harga * obj.copy
-        print(obj.harga_bayar)
-
-        obj.save()
-
-        return obj
 
 class PemesananUpdateView(UpdateView):
     model = Pemesanan
@@ -161,7 +122,7 @@ class PemesananDetailView(DetailView, LoginRequiredMixin, UserPassesTestMixin):
         print(obj.harga_bayar)
 
         if obj.bukti:
-            obj.status_bayar = 'Telah Dibayar'
+            obj.status_bayar = 'Menunggu Konfirmasi Admin'
         else:
             pass
 

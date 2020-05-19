@@ -2,11 +2,7 @@
 
 
 {% block content %}
-  
-
-
-<a href="{% url 'logout' %}"><h1>{{user.first_name}}</h1></a>
-<a href="{% url 'app-create' %}">Tambah</a>
+<a class="btn btn-primary" href="{% url 'app-create' %}">Tambah</a>
       <table class="table">
   <thead>
     <tr>
@@ -29,7 +25,7 @@
       
       <tr>
         <td>{{forloop.counter}}</td>
-        <td><a href="{% url 'app-detail' pesan.id %}">{{pesan.file}}</a></td>
+        <td><a href="{% url 'app-detail' pesan.id %}">{{pesan.nama_file}}</a></td>
         <td>{{pesan.print_id.jenis_print}}</td>
         <td>{{pesan.waktu_pengambilan}}</td>
         <td>{{pesan.pengambilan_id.tempat_pengambilan}}</td>
