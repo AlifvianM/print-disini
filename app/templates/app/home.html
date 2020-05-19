@@ -1,0 +1,50 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700|Oswald:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "app/fonts/icomoon/style.css" %} ">
+
+    <link rel="stylesheet" href="{% static "app/css/bootstrap.min.css" %} ">
+    <link rel="stylesheet" href="{% static "app/css/jquery.fancybox.min.css" %} ">
+    <link rel="stylesheet" href="{% static "app/css/owl.carousel.min.css" %} ">
+    <link rel="stylesheet" href="{% static "app/css/owl.theme.default.min.css" %} ">
+    <link rel="stylesheet" href="{% static "app/fonts/flaticon/font/flaticon.css" %} ">
+    <link rel="stylesheet" href="{% static "app/css/aos.css" %} ">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static "app/css/style.css" %} ">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+
+<div class="container">
+
+  {% block content %}
+    
+  {% endblock content %}
+
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="{% static "app/js/jquery-3.3.1.min.js" %} "></script>
+      <script src="{% static "app/js/popper.min.js" %} "></script>
+      <script src="{% static "app/js/bootstrap.min.js" %} "></script>
+      <script src="{% static "app/js/owl.carousel.min.js" %} "></script>
+      <script src="{% static "app/js/jquery.sticky.js" %} "></script>
+      <script src="{% static "app/js/jquery.waypoints.min.js" %} "></script>
+      <script src="{% static "app/js/jquery.animateNumber.min.js" %} "></script>
+      <script src="{% static "app/js/jquery.fancybox.min.js" %} "></script>
+      <script src="{% static "app/js/jquery.easing.1.3.js" %} "></script>
+      <script src="{% static "app/js/aos.js" %} "></script>
+  
+  <script src="{% static "app/js/main.js" %} "></script>
+  </body>
+</html>
