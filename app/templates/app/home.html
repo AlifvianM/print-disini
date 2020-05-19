@@ -3,22 +3,41 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700|Oswald:400,700" rel="stylesheet">
-
-    <link rel="stylesheet" href="{% static "app/fonts/icomoon/style.css" %} ">
-
-    <link rel="stylesheet" href="{% static "app/css/bootstrap.min.css" %} ">
-    <link rel="stylesheet" href="{% static "app/css/jquery.fancybox.min.css" %} ">
-    <link rel="stylesheet" href="{% static "app/css/owl.carousel.min.css" %} ">
-    <link rel="stylesheet" href="{% static "app/css/owl.theme.default.min.css" %} ">
-    <link rel="stylesheet" href="{% static "app/fonts/flaticon/font/flaticon.css" %} ">
-    <link rel="stylesheet" href="{% static "app/css/aos.css" %} ">
-
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{% static "app/css/style.css" %} ">
+    <link rel="stylesheet" href="{% static "app/vendor/css/bootstrap.min.css" %}">
+    <!-- Bootstrap CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static "app/vendor/css/font-awesome.min.css" %}">
+    <!-- owl.carousel CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static "app/vendor/css/owl.carousel.css" %}">
+    <link rel="stylesheet" href="{% static "app/vendor/css/owl.theme.css" %}">
+    <link rel="stylesheet" href="{% static "app/vendor/css/owl.transitions.css" %}">
+    <!-- animate CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static "app/vendor/css/animate.css" %}">
+    <!-- normalize CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static "app/vendor/css/normalize.css" %}">
+    <!-- main CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static "app/vendor/css/main.css" %}">
+    <!-- morrisjs CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static "app/vendor/css/morrisjs/morris.css" %}">
+    <!-- mCustomScrollbar CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static "app/vendor/css/scrollbar/jquery.mCustomScrollbar.min.css" %}">
+    <!-- metisMenu CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static "app/vendor/css/metisMenu/metisMenu.min.css" %}">
+    <link rel="stylesheet" href="{% static "app/vendor/css/metisMenu/metisMenu-vertical.css" %}">
+    <!-- calendar CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static "app/vendor/css/calendar/fullcalendar.min.css" %}">
+    <link rel="stylesheet" href="{% static "app/vendor/css/calendar/fullcalendar.print.min.css" %}">
+    <!-- forms CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static "app/vendor/css/form/all-type-forms.css" %}">
     <title>Hello, world!</title>
   </head>
   <body>
@@ -32,19 +51,48 @@
   {% endblock content %}
 
 </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="{% static "app/js/jquery-3.3.1.min.js" %} "></script>
-      <script src="{% static "app/js/popper.min.js" %} "></script>
-      <script src="{% static "app/js/bootstrap.min.js" %} "></script>
-      <script src="{% static "app/js/owl.carousel.min.js" %} "></script>
-      <script src="{% static "app/js/jquery.sticky.js" %} "></script>
-      <script src="{% static "app/js/jquery.waypoints.min.js" %} "></script>
-      <script src="{% static "app/js/jquery.animateNumber.min.js" %} "></script>
-      <script src="{% static "app/js/jquery.fancybox.min.js" %} "></script>
-      <script src="{% static "app/js/jquery.easing.1.3.js" %} "></script>
-      <script src="{% static "app/js/aos.js" %} "></script>
-  
-  <script src="{% static "app/js/main.js" %} "></script>
+    <script src="{% static "app/vendor/js/vendor/jquery-1.11.3.min.js" %}"></script>
+    <!-- bootstrap JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/bootstrap.min.js" %}"></script>
+    <!-- wow JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/wow.min.js" %}"></script>
+    <!-- price-slider JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/jquery-price-slider.js" %}"></script>
+    <!-- meanmenu JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/jquery.meanmenu.js" %}"></script>
+    <!-- owl.carousel JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/owl.carousel.min.js" %}"></script>
+    <!-- sticky JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/jquery.sticky.js" %}"></script>
+    <!-- scrollUp JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/jquery.scrollUp.min.js" %}"></script>
+    <!-- mCustomScrollbar JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/scrollbar/jquery.mCustomScrollbar.concat.min.js" %}"></script>
+    <script src="{% static "app/vendor/js/scrollbar/mCustomScrollbar-active.js" %}"></script>
+    <!-- metisMenu JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/metisMenu/metisMenu.min.js" %}"></script>
+    <script src="{% static "app/vendor/js/metisMenu/metisMenu-active.js" %}"></script>
+    <!-- tab JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/tab.js" %}"></script>
+    <!-- icheck JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/icheck/icheck.min.js" %}"></script>
+    <script src="{% static "app/vendor/js/icheck/icheck-active.js" %}"></script>
+    <!-- plugins JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/plugins.js" %}"></script>
+    <!-- main JS
+    ============================================ -->
+    <script src="{% static "app/vendor/js/main.js" %}"></script>
   </body>
 </html>
