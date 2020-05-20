@@ -59,7 +59,7 @@ class PemesananCreateView(CreateView, LoginRequiredMixin, UserPassesTestMixin):
 
 class PemesananUpdateView(UpdateView):
     model = Pemesanan
-    template_name = 'app/create.html'
+    template_name = 'app/bayar.html'
     form_class = PemesananUpdateForm
 
 
@@ -118,7 +118,7 @@ class PemesananDetailView(DetailView, LoginRequiredMixin, UserPassesTestMixin):
         info = pdf.getNumPages()
         obj.banyak_halaman = info
         # obj.save()
-        obj.harga_bayar = obj.banyak_halaman * obj.print_id.harga * obj.copy
+        obj.harga_bayar = (obj.banyak_halaman * obj.print_id.harga * obj.copy) + obj.jilid_id.harga_jilid
         print(obj.harga_bayar)
 
         if obj.bukti:
