@@ -10,6 +10,7 @@
       <th scope="col">Nama File</th>
       <th scope="col">Jenis Cetak</th>
       <th scope="col">Waktu Pengambilan</th>
+      <th scope="col">Status</th>
       <th scope="col">Tempat Pengambilan</th>
       <th scope="col">Banyak Halaman</th>
       <th scope="col">Harga</th>
@@ -28,6 +29,7 @@
         <td><a href="{% url 'app-detail' pesan.id %}">{{pesan.nama_file}}</a></td>
         <td>{{pesan.print_id.jenis_print}}</td>
         <td>{{pesan.waktu_pengambilan}}</td>
+        <td>{{pesan.status_id}}</td>
         <td>{{pesan.pengambilan_id.tempat_pengambilan}}</td>
         <td>{{pesan.banyak_halaman}}</td>
         <td>Rp.{{pesan.harga_bayar}}</td>

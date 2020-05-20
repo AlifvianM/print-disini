@@ -13,8 +13,9 @@ class PemesananForm(forms.ModelForm):
     file = forms.FileField(
             widget=forms.FileInput(
                     attrs = {
-                        'class' : '',
+                        'class' : 'form-control',
                         'type'  : 'file',
+                        'onchange' : 'document.getElementById("prepend-small-btn").value = this.value;',
                     }
                 )   
         )
@@ -88,6 +89,7 @@ class PemesananUpdateForm(forms.ModelForm):
                     attrs = {
                         'class' : 'form-control',
                         'type'  : 'file',
+                        'onchange' : 'document.getElementById("prepend-small-btn").value = this.value;',
                     }
                 )   
         )
