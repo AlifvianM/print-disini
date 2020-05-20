@@ -10,6 +10,7 @@ class PemesananForm(forms.ModelForm):
     class Meta:
         model = Pemesanan
         fields = (
+            'nama_file',
         	'file',
         	'print_id',
         	'waktu_pengambilan',
